@@ -1,12 +1,11 @@
 buildscript {
     repositories {
-        mavenCentral()
         maven {
             url 'http://dl.bintray.com/sponiro/gradle-plugins'
         }
     }
     dependencies {
-        classpath group: 'de.fanero.gradle.plugin.nar', name: 'gradle-nar-plugin', version: '0.1'
+        classpath group: 'de.fanero.gradle.plugin.nar', name: 'gradle-nar-plugin', version: '0.3'
     }
 }
 
@@ -18,11 +17,13 @@ repositories {
 }
 
 dependencies {
-    compile group: 'commons-io', name: 'commons-io', version: '2.2'
-
     compile 'org.apache.nifi:nifi-api:0.2.1'
     compile 'org.apache.nifi:nifi-processor-utils:0.2.1'
 
     nar 'org.apache.nifi:nifi-standard-services-api-nar:0.2.1'
 }
+
+group = 'de.fanero.example'
+version = '1.6'
+
 
